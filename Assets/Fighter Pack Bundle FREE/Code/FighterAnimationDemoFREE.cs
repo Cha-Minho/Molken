@@ -12,6 +12,7 @@ public class FighterAnimationDemoFREE : MonoBehaviour
     private GameObject cam;
     private GameObject fighter;
 
+
     void Start()
     {
         cam = GameObject.FindWithTag("MainCamera");
@@ -28,6 +29,7 @@ public class FighterAnimationDemoFREE : MonoBehaviour
 
         if (Input.GetKey(KeyCode.S))
             animationTrigger += "s";
+            
         if (Input.GetKey(KeyCode.D))
             animationTrigger += "d";
         if (Input.GetKey(KeyCode.J))
