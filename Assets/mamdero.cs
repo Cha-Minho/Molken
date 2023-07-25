@@ -56,8 +56,14 @@ public class Mamdero : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         print("룸 접속 완료");
-        if (PhotonNetwork.IsMasterClient) { GameObject player = PhotonNetwork.Instantiate("Black Ninja", spawnPoints[0].position, Quaternion.identity); }
-        else { GameObject player = PhotonNetwork.Instantiate("White Ninja", spawnPoints[1].position, Quaternion.identity); }
+        if (PhotonNetwork.IsMasterClient)
+        {
+            GameObject player = PhotonNetwork.Instantiate("Black Ninja", spawnPoints[0].position, Quaternion.Euler(0, 180, 0));
+        }
+        else
+        {
+            GameObject player = PhotonNetwork.Instantiate("White Ninja", spawnPoints[1].position, Quaternion.identity);
+        }
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message) => print("방만들기실패");
