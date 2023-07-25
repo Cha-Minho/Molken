@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
 
-public class whitecollision : MonoBehaviour
+public class whitecollision : MonoBehaviourPunCallbacks
 {
     public Animator animator;
 
@@ -15,9 +16,6 @@ public class whitecollision : MonoBehaviour
 
     public int startingHP = 180;
     private int currentHP;
-    //private float hpBarWidth = 100f; // HP 바의 너비
-    //private float hpBarHeight = 10f; // HP 바의 높이
-    //[SerializeField]
     public Slider WhiteHP;
 
     // Start is called before the first frame update
@@ -35,6 +33,9 @@ public class whitecollision : MonoBehaviour
 
     void Update()
     {
+        if (!photonView.IsMine)
+            return;
+
         string animationTrigger = "";
 
         if (Input.GetKey(KeyCode.S))
@@ -77,7 +78,6 @@ public class whitecollision : MonoBehaviour
             animator.ResetTrigger("wdi");
             animator.ResetTrigger("sk");
             animator.ResetTrigger("sj");
-
         }
     }
 
@@ -105,6 +105,7 @@ public class whitecollision : MonoBehaviour
     private void OnCharacterDeath()
     {
         gameObject.SetActive(false);
+
     }
 
     private void UpdateHPBar()
