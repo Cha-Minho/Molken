@@ -31,13 +31,15 @@ public class HPBAR : MonoBehaviour
         BlackHP.value = (float)curHP / (float)maxHP;
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         // If collided object has tag "OpponentAttack"
         if (other.gameObject.CompareTag("OpponentAttack"))
         {
             // Decrease health by 10
             curHP -= 10;
+            HandleHP();
         }
     }
+
 }
