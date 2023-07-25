@@ -83,35 +83,35 @@ public class BlackNinja : MonoBehaviourPunCallbacks
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("OpponentBody"))
-        {
-            // HP 皑家 贸府
-            TakeDamage(10); // HP 皑家
-        }
-    }
+//    private void OnCollisionEnter(Collision collision)
+//    {
+//        if (collision.gameObject.CompareTag("OpponentBody"))
+//        {
+//            // HP 皑家 贸府
+//            TakeDamage(10); // HP 皑家
+//        }
+//    }
 
-    private void TakeDamage(int amount)
-    {
-        currentHP -= amount;
+//    private void TakeDamage(int amount)
+//    {
+//        currentHP -= amount;
 
-        if (currentHP <= 0)
-        {
-            currentHP = 0;
-            OnCharacterDeath();
-        }
-        UpdateHPBar();
-    }
+//        if (currentHP <= 0)
+//        {
+//            currentHP = 0;
+//            OnCharacterDeath();
+//        }
+//        UpdateHPBar();
+//    }
 
-    private void OnCharacterDeath()
-    {
-        gameObject.SetActive(false);
-    }
+//    private void OnCharacterDeath()
+//    {
+//        gameObject.SetActive(false);
+//    }
 
-    private void UpdateHPBar()
-    {
-        float hpPercentage = (float)currentHP / startingHP;
-        WhiteHP.value = hpPercentage;
-    }
-}
+//    private void UpdateHPBar()
+//    {
+//        float hpPercentage = (float)currentHP / startingHP;
+//        WhiteHP.value = hpPercentage;
+//    }
+//}
