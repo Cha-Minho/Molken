@@ -31,7 +31,7 @@ public class HPBAR : MonoBehaviour
         BlackHP.value = (float)curHP / (float)maxHP;
     }
 
-    private void OnCollisionEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
         // If collided object has tag "OpponentAttack"
         if (other.gameObject.CompareTag("OpponentAttack"))

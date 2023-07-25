@@ -12,8 +12,6 @@ public class WhiteNinja : MonoBehaviourPunCallbacks
     private Quaternion resetRot;
     private GameObject fighter;
 
-
-
     void Start()
     {
         photonView = GetComponent<PhotonView>();
@@ -25,7 +23,6 @@ public class WhiteNinja : MonoBehaviourPunCallbacks
 
         fighter = GameObject.Find("Black Ninja(Clone)");
         fighter.transform.position = new Vector3(0, 0, 0);
-
     }
 
     void Update()
@@ -58,58 +55,24 @@ public class WhiteNinja : MonoBehaviourPunCallbacks
 
         if (!string.IsNullOrEmpty(animationTrigger))
         {
-            animator.SetTrigger(animationTrigger);
+            photonView.RPC("SetAnimationTrigger", RpcTarget.All, animationTrigger);
         }
-        else
+    }
+
+    [PunRPC]
+    void SetAnimationTrigger(string animationTrigger)
+    {
+        animator.SetTrigger(animationTrigger);
+        // Note: reset all triggers other than the one just set
+        foreach (AnimatorControllerParameter parameter in animator.parameters)
         {
-            animator.ResetTrigger("s");
-            animator.ResetTrigger("d");
-            animator.ResetTrigger("j");
-            animator.ResetTrigger("k");
-            animator.ResetTrigger("u");
-            animator.ResetTrigger("i");
-            animator.ResetTrigger("a");
-            animator.ResetTrigger("w");
-            animator.ResetTrigger("sdj");
-            animator.ResetTrigger("sdk");
-            animator.ResetTrigger("duw");
-            animator.ResetTrigger("sdi");
-            animator.ResetTrigger("sdu");
-            animator.ResetTrigger("wdi");
-            animator.ResetTrigger("sk");
-            animator.ResetTrigger("sj");
+            if (parameter.type == AnimatorControllerParameterType.Trigger)
+            {
+                if (parameter.name != animationTrigger)
+                {
+                    animator.ResetTrigger(parameter.name);
+                }
+            }
         }
     }
 }
-//    private void OnCollisionEnter(Collision collision)
-//    {
-//        if (collision.gameObject.CompareTag("OpponentBody"))
-//        {
-//            // HP 皑家 贸府
-//            TakeDamage(10); // HP 皑家
-//        }
-//    }
-
-//    private void TakeDamage(int amount)
-//    {
-//        currentHP -= amount;
-
-//        if (currentHP <= 0)
-//        {
-//            currentHP = 0;
-//            OnCharacterDeath();
-//        }
-//        UpdateHPBar();
-//    }
-
-//    private void OnCharacterDeath()
-//    {
-//        gameObject.SetActive(false);
-//    }
-
-//    private void UpdateHPBar()
-//    {
-//        float hpPercentage = (float)currentHP / startingHP;
-//        WhiteHP.value = hpPercentage;
-//    }
-//}
