@@ -152,7 +152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5a043f4d8c15e346a4b60e78afc23c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ConnectionStatus: {fileID: 0}
   IDtext: {fileID: 0}
   connectBtn: {fileID: 0}
   spawnPoints: []
@@ -738,65 +737,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1817135253558328, guid: 734cc7b3bcf18430e914f983a4108584, type: 3}
   m_PrefabInstance: {fileID: 2024255023}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1098428356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098428355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7918b17adac95874ca33e1b8bea1a01a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  photonView: {fileID: 0}
-  startingHP: 180
-  WhiteHP: {fileID: 0}
---- !u!114 &1098428357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098428355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 1
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
---- !u!54 &1098428358
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098428355}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &1098428359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -815,11 +755,26 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents:
-  - {fileID: 1098428357}
+  ObservedComponents: []
   sceneViewId: 2
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &1098428361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098428355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7918b17adac95874ca33e1b8bea1a01a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1629034428}
+  photonView: {fileID: 0}
+  startingHP: 180
+  WhiteHP: {fileID: 0}
 --- !u!1 &1311191372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1348,12 +1303,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1814490051873772, guid: a102cb0cd07134ae4a8ce74950e5c5ef, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1822962949}
-    - targetCorrespondingSourceObject: {fileID: 1814490051873772, guid: a102cb0cd07134ae4a8ce74950e5c5ef, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1822962948}
-    - targetCorrespondingSourceObject: {fileID: 1814490051873772, guid: a102cb0cd07134ae4a8ce74950e5c5ef, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1822962947}
     - targetCorrespondingSourceObject: {fileID: 1728802610079698, guid: a102cb0cd07134ae4a8ce74950e5c5ef, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1629034429}
@@ -1378,49 +1327,6 @@ MonoBehaviour:
   animator: {fileID: 1629034428}
   startingHP: 180
   WhiteHP: {fileID: 1499995325}
---- !u!114 &1822962947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1822962940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 1
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
---- !u!54 &1822962948
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1822962940}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &1822962949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1439,8 +1345,7 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents:
-  - {fileID: 1822962947}
+  ObservedComponents: []
   sceneViewId: 1
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -1518,16 +1423,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1817135253558328, guid: 734cc7b3bcf18430e914f983a4108584, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1098428361}
+    - targetCorrespondingSourceObject: {fileID: 1817135253558328, guid: 734cc7b3bcf18430e914f983a4108584, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1098428359}
-    - targetCorrespondingSourceObject: {fileID: 1817135253558328, guid: 734cc7b3bcf18430e914f983a4108584, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1098428358}
-    - targetCorrespondingSourceObject: {fileID: 1817135253558328, guid: 734cc7b3bcf18430e914f983a4108584, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1098428357}
-    - targetCorrespondingSourceObject: {fileID: 1817135253558328, guid: 734cc7b3bcf18430e914f983a4108584, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1098428356}
     - targetCorrespondingSourceObject: {fileID: 1391611152846662, guid: 734cc7b3bcf18430e914f983a4108584, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1659286646}
