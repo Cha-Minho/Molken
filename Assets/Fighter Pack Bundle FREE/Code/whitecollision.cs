@@ -4,37 +4,39 @@ using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
 
-public class whitecollision : MonoBehaviourPunCallbacks
+public class BlackNinja : MonoBehaviourPunCallbacks
 {
     public Animator animator;
-
-    private Transform defaultCamTransform;
+    public PhotonView photonView;
     private Vector3 resetPos;
     private Quaternion resetRot;
-    private GameObject cam;
     private GameObject fighter;
 
     public int startingHP = 180;
     private int currentHP;
     public Slider WhiteHP;
 
-    // Start is called before the first frame update
     void Start()
     {
-        cam = GameObject.FindWithTag("MainCamera");
-        defaultCamTransform = cam.transform;
-        resetPos = defaultCamTransform.position;
-        resetRot = defaultCamTransform.rotation;
-        fighter = GameObject.Find("Black Ninja");
+        photonView = GetComponent<PhotonView>();
+        if (!photonView.IsMine)
+        {
+            // If this object is not controlled by the local player, ignore inputs
+            enabled = false;
+        }
+
+        fighter = GameObject.Find("White Ninja");
         fighter.transform.position = new Vector3(0, 0, 0);
         currentHP = startingHP;
     }
-    // Update is called once per frame
 
     void Update()
     {
         if (!photonView.IsMine)
+        {
+            // Ignore inputs if this object is not controlled by the local player
             return;
+        }
 
         string animationTrigger = "";
 
@@ -105,7 +107,6 @@ public class whitecollision : MonoBehaviourPunCallbacks
     private void OnCharacterDeath()
     {
         gameObject.SetActive(false);
-
     }
 
     private void UpdateHPBar()
