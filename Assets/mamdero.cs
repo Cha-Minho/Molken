@@ -58,7 +58,6 @@ public class Mamdero : MonoBehaviourPunCallbacks
         print("룸 접속 완료");
         if (PhotonNetwork.IsMasterClient) { GameObject player = PhotonNetwork.Instantiate("Black Ninja", spawnPoints[0].position, Quaternion.identity); }
         else { GameObject player = PhotonNetwork.Instantiate("White Ninja", spawnPoints[1].position, Quaternion.identity); }
-        canvasParent.SetActive(false);
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message) => print("방만들기실패");

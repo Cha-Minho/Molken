@@ -8,7 +8,6 @@ public class HPBAR : MonoBehaviour
     [SerializeField]
     private Slider BlackHP;
 
-
     [SerializeField]
     private Slider WhiteHP;
 
@@ -24,15 +23,21 @@ public class HPBAR : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            curHP -= 10;
-        }
+        HandleHP();
     }
-
 
     private void HandleHP()
     {
         BlackHP.value = (float)curHP / (float)maxHP;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        // If collided object has tag "OpponentAttack"
+        if (collision.gameObject.CompareTag("OpponentAttack"))
+        {
+            // Decrease health by 10
+            curHP -= 10;
+        }
     }
 }

@@ -12,9 +12,6 @@ public class BlackNinja : MonoBehaviourPunCallbacks
     private Quaternion resetRot;
     private GameObject fighter;
 
-    public int startingHP = 180;
-    private int currentHP;
-    public Slider WhiteHP;
 
     void Start()
     {
@@ -27,7 +24,6 @@ public class BlackNinja : MonoBehaviourPunCallbacks
 
         fighter = GameObject.Find("White Ninja");
         fighter.transform.position = new Vector3(0, 0, 0);
-        currentHP = startingHP;
     }
 
     void Update()
@@ -82,6 +78,7 @@ public class BlackNinja : MonoBehaviourPunCallbacks
             animator.ResetTrigger("sj");
         }
     }
+}
 
 //    private void OnCollisionEnter(Collision collision)
 //    {

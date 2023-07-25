@@ -7,14 +7,12 @@ using Photon.Pun;
 public class WhiteNinja : MonoBehaviourPunCallbacks
 {
     public Animator animator;
-    public PhotonView photonView;  
+    public PhotonView photonView;
     private Vector3 resetPos;
-    private Quaternion resetRot;   
+    private Quaternion resetRot;
     private GameObject fighter;
 
-    public int startingHP = 180;
-    private int currentHP;
-    public Slider WhiteHP;
+
 
     void Start()
     {
@@ -27,7 +25,7 @@ public class WhiteNinja : MonoBehaviourPunCallbacks
 
         fighter = GameObject.Find("Black Ninja");
         fighter.transform.position = new Vector3(0, 0, 0);
-        currentHP = startingHP;
+
     }
 
     void Update()
@@ -82,7 +80,7 @@ public class WhiteNinja : MonoBehaviourPunCallbacks
             animator.ResetTrigger("sj");
         }
     }
-
+}
 //    private void OnCollisionEnter(Collision collision)
 //    {
 //        if (collision.gameObject.CompareTag("OpponentBody"))
