@@ -23,7 +23,7 @@ public class WhiteNinja : MonoBehaviourPunCallbacks
             enabled = false;
         }
 
-        fighter = GameObject.Find("Black Ninja");
+        fighter = GameObject.Find("Black Ninja(Clone)");
         fighter.transform.position = new Vector3(0, 0, 0);
 
     }
