@@ -380,6 +380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 957578743}
   - component: {fileID: 957578744}
+  - component: {fileID: 957578745}
   m_Layer: 5
   m_Name: BlackHP
   m_TagString: Untagged
@@ -460,6 +461,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &957578745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957578742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c48c209a650d514b9fe47830a224422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HPBarObject: {fileID: 1817135253558328, guid: 39ac9e3a6fad57040baba090c79f7b69, type: 3}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,8 +759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c48c209a650d514b9fe47830a224422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BlackHP: {fileID: 957578744}
-  WhiteHP: {fileID: 1499995325}
+  HPBarObject: {fileID: 0}
 --- !u!1 &1311191372
 GameObject:
   m_ObjectHideFlags: 0
@@ -863,6 +876,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1499995324}
   - component: {fileID: 1499995325}
+  - component: {fileID: 1499995326}
   m_Layer: 5
   m_Name: WhiteHP
   m_TagString: Untagged
@@ -942,19 +956,20 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &1499995326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499995323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb400ae8879cd4d45a05775faa3a5d12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HPBarObject: {fileID: 1814490051873772, guid: 2b617be356a659048878f19f18830bc4, type: 3}
 --- !u!1 &1547973743
 GameObject:
   m_ObjectHideFlags: 0
