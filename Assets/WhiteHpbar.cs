@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HPBAR : MonoBehaviour
+public class WhiteHpbar : MonoBehaviour
 {
     public GameObject HPBarObject; // Drag your HP Bar GameObject in the Unity Editor
-    private Slider BlackHP;
+    private Slider WhiteHP;
 
     private float maxHP = 180;
     private float curHP = 180;
@@ -14,7 +14,7 @@ public class HPBAR : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        BlackHP = HPBarObject.GetComponent<Slider>();
+        WhiteHP = HPBarObject.GetComponent<Slider>();
         HandleHP();
     }
 
@@ -26,7 +26,7 @@ public class HPBAR : MonoBehaviour
 
     private void HandleHP()
     {
-        BlackHP.value = (float)curHP / (float)maxHP;
+        WhiteHP.value = (float)curHP / (float)maxHP;
     }
 
     private void OnTriggerEnter(Collider other)
