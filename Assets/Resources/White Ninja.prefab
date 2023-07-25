@@ -3481,10 +3481,9 @@ GameObject:
   - component: {fileID: 4988563932913882}
   - component: {fileID: 1908108275013970179}
   - component: {fileID: 4872412137252957966}
-  - component: {fileID: 67238072648413428}
   m_Layer: 0
   m_Name: White Ninja
-  m_TagString: OpponentAttack
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3496,15 +3495,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814490051873772}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4128496052717544}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1908108275013970179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3541,27 +3540,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 95234055444683050}
   photonView: {fileID: 1908108275013970179}
---- !u!65 &67238072648413428
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814490051873772}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 2.2279174, z: 1}
-  m_Center: {x: 0, y: 0.8284067, z: 0}
 --- !u!1 &1818365055292122
 GameObject:
   m_ObjectHideFlags: 0

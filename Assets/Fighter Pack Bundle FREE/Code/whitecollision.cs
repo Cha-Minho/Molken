@@ -57,6 +57,10 @@ public class BlackNinja : MonoBehaviourPunCallbacks
         {
             photonView.RPC("SetAnimationTrigger", RpcTarget.All, animationTrigger);
         }
+        else
+        {
+            photonView.RPC("ResetAllTriggers", RpcTarget.All);
+        }
     }
 
     [PunRPC]
@@ -75,4 +79,16 @@ public class BlackNinja : MonoBehaviourPunCallbacks
             }
         }
     }
+    [PunRPC]
+    void ResetAllTriggers()
+    {
+        foreach (AnimatorControllerParameter parameter in animator.parameters)
+        {
+            if (parameter.type == AnimatorControllerParameterType.Trigger)
+            {
+                animator.ResetTrigger(parameter.name);
+            }
+        }
+    }
+
 }
