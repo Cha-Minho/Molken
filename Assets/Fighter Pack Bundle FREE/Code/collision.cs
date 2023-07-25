@@ -25,7 +25,7 @@ public class WhiteNinja : MonoBehaviourPunCallbacks
             enabled = false;
         }
 
-        fighter = GameObject.Find("White Ninja");
+        fighter = GameObject.Find("Black Ninja");
         fighter.transform.position = new Vector3(0, 0, 0);
         currentHP = startingHP;
     }

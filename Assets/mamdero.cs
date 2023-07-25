@@ -28,10 +28,11 @@ public class Mamdero : MonoBehaviourPunCallbacks
         PhotonNetwork.ConnectUsingSettings();
         spawnPoints = new Transform[2]; // 배열 초기화
         spawnPoints[0] = new GameObject().transform;
-        spawnPoints[0].position = new Vector3(0, 10, 2);
+        spawnPoints[0].position = new Vector3(0, 0, 2);
         spawnPoints[1] = new GameObject().transform;
-        spawnPoints[1].position = new Vector3(0, 10, -2);
+        spawnPoints[1].position = new Vector3(0, 0, -2);
         PhotonNetwork.JoinOrCreateRoom("MyRoom", new RoomOptions { MaxPlayers = 2 }, null);
+
     }
 
     // void Update()  // 이 부분도 제거
