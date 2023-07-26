@@ -11,6 +11,8 @@ public class BlackNinja : MonoBehaviourPunCallbacks
     private Vector3 resetPos;
     private Quaternion resetRot;
     private GameObject fighter;
+    public WhiteHpbar whitehpscript;
+
 
     void Start()
     {
@@ -88,6 +90,18 @@ public class BlackNinja : MonoBehaviourPunCallbacks
             {
                 animator.ResetTrigger(parameter.name);
             }
+        }
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log(other.gameObject.name);
+        // If collided object has tag "OpponentAttack"
+        if (other.gameObject.CompareTag("OpponentAttack"))
+        {
+            whitehpscript.curHP -= 10; // Access curHP variable of HPBAR script
+            whitehpscript.HandleHP(); // Update HP bar after decreasing HP
         }
     }
 

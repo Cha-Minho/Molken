@@ -3773,7 +3773,6 @@ GameObject:
   - component: {fileID: 5037702950191278482}
   - component: {fileID: 3304447105671787997}
   - component: {fileID: 2300160451340089714}
-  - component: {fileID: 3133813784513782809}
   m_Layer: 0
   m_Name: Black Ninja
   m_TagString: OpponentAttack
@@ -3833,6 +3832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 95545109365852868}
   photonView: {fileID: -1955454214634530517}
+  hpbarScript: {fileID: 0}
 --- !u!65 &3304447105671787997
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3881,19 +3881,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3133813784513782809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1817135253558328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c48c209a650d514b9fe47830a224422, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HPBarObject: {fileID: 0}
 --- !u!1 &1858608831086210
 GameObject:
   m_ObjectHideFlags: 0

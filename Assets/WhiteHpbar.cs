@@ -9,7 +9,7 @@ public class WhiteHpbar : MonoBehaviour
     private Slider WhiteHP;
 
     private float maxHP = 180;
-    private float curHP = 180;
+    public float curHP = 180;
 
     // Start is called before the first frame update
     void Start()
@@ -24,20 +24,10 @@ public class WhiteHpbar : MonoBehaviour
         HandleHP();
     }
 
-    private void HandleHP()
+    public void HandleHP()
     {
         WhiteHP.value = (float)curHP / (float)maxHP;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log(other.gameObject.name);
-        // If collided object has tag "OpponentAttack"
-        if (other.gameObject.CompareTag("OpponentAttack"))
-        {
-            // Decrease health by 10
-            curHP -= 10;
-            HandleHP();
-        }
-    }
+    
 }
