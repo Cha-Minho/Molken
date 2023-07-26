@@ -3086,6 +3086,8 @@ GameObject:
   - component: {fileID: 4128496052717544}
   - component: {fileID: 95234055444683050}
   - component: {fileID: 5239230208599389614}
+  - component: {fileID: 7385806907349267576}
+  - component: {fileID: 4862555127431333493}
   m_Layer: 0
   m_Name: ma
   m_TagString: Untagged
@@ -3172,6 +3174,43 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.9505138, z: 1}
   m_Center: {x: -0, y: 0.9235306, z: 0}
+--- !u!114 &7385806907349267576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728802610079698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f07b06fbdfbbbc3418d27b7038b86b66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 95234055444683050}
+  photonView: {fileID: 4862555127431333493}
+  whitehpscript: {fileID: 0}
+--- !u!114 &4862555127431333493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728802610079698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1746005102609606
 GameObject:
   m_ObjectHideFlags: 0
@@ -3501,9 +3540,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4988563932913882}
-  - component: {fileID: 1908108275013970179}
-  - component: {fileID: 4872412137252957966}
-  - component: {fileID: 404489690674989251}
   m_Layer: 0
   m_Name: White Ninja
   m_TagString: OpponentAttack
@@ -3527,64 +3563,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1908108275013970179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814490051873772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents: []
-  sceneViewId: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
---- !u!114 &4872412137252957966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814490051873772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f07b06fbdfbbbc3418d27b7038b86b66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 95234055444683050}
-  photonView: {fileID: 1908108275013970179}
-  whitehpscript: {fileID: 0}
---- !u!65 &404489690674989251
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814490051873772}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1.9034338, z: 1}
-  m_Center: {x: -0, y: 0.94859433, z: 0}
 --- !u!1 &1818365055292122
 GameObject:
   m_ObjectHideFlags: 0
