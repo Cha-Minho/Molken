@@ -102,10 +102,12 @@ public class WhiteNinja : MonoBehaviourPunCallbacks
         // If collided object has tag "OpponentAttack"
         if (other.gameObject.CompareTag("OpponentAttack"))
         {
+            Debug.Log(""+ hpbarScript.curHP);
             if(!other.gameObject.CompareTag(this.gameObject.tag))
         {
                 // Decrease health by 10
                 hpbarScript.curHP -= 10; // Access curHP variable of HPBAR script
+                
                 hpbarScript.HandleHP(); // Update HP bar after decreasing HP
             }
         }

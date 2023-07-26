@@ -3090,7 +3090,7 @@ GameObject:
   - component: {fileID: 4862555127431333493}
   m_Layer: 0
   m_Name: ma
-  m_TagString: Untagged
+  m_TagString: OpponentAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
