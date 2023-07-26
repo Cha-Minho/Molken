@@ -24,6 +24,11 @@ public class WhiteNinja : MonoBehaviourPunCallbacks
 
         fighter = GameObject.Find("Black Ninja(Clone)");
         fighter.transform.position = new Vector3(0, 0, 0);
+        GameObject HPBarObject = GameObject.Find("BlackHP");
+        if (HPBarObject != null)
+        {
+            hpbarScript = HPBarObject.GetComponent<HPBAR>();
+        }
     }
 
     void Update()
